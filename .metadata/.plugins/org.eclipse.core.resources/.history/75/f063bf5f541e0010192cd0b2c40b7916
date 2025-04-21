@@ -1,0 +1,64 @@
+package model;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+public class Carrinho {
+
+	Produto produto;
+	List<Produto> itens = new ArrayList<>();
+	Scanner sc = new Scanner(System.in);
+
+	public Carrinho() {
+	};
+
+	public void adicionarProduto(Produto produto) {
+		itens.add(produto);
+	}
+
+	public boolean removerProduto(String nome) {
+		Iterator<Produto> iterator = itens.iterator();
+		while (iterator.hasNext()) {
+			Produto p = iterator.next();
+			if (p.getNome().equalsIgnoreCase(nome)) {
+				iterator.remove();
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public void lisatarProduto() {
+		if (itens.isEmpty()) {
+			System.out.println("Carrinho vazio!");
+			return;
+		}
+		
+		for(Produto p: itens) {
+			System.out.println(p);
+		}
+	}
+
+	public double calcularTotal() {
+		double total = 0;
+		for (Produto p : itens) {
+			total += p.calcularSubtotal();
+		}
+		return total;
+	}
+
+	public final String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("-------------------------------- \n");
+		sb.append("Compra finalizada! \n");
+		sb.append("Total pago: R$ ");
+		sb.append(Total()).append("\n");
+		sb.append("Obigado pela prefêrencia!");
+		sb.append("\n-------------------------------- \n");
+		sc.close();
+		return sb.toString();
+	}
+
+}

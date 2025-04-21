@@ -1,0 +1,1 @@
+INDEX VERSION 1.134+C:\temp1\ws_exercios_java\Carrinho-de-Compras\src\application\.metadata\.plugins\org.eclipse.jdt.core

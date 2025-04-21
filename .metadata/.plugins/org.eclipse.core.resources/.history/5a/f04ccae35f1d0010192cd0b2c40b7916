@@ -1,0 +1,17 @@
+package service;
+
+import model.Carrinho;
+import model.Produto;
+
+public class CarrinhService {
+	
+	private Carrinho carrinho;
+
+	public CarrinhService(Carrinho carrinho) {
+		this.carrinho = carrinho;
+	}
+	
+	
+
+	
+}

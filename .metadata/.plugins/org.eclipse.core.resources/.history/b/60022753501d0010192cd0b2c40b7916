@@ -1,0 +1,88 @@
+package entities;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Carrinho {
+
+	Produto produto;
+	List<Produto> itens = new ArrayList<>();
+	Scanner sc = new Scanner(System.in);
+
+	public Carrinho() {
+	};
+
+	public void adicionarItens() {
+		System.out.println();
+		System.out.println("------------------------------------");
+		System.out.print("Digite o nome do produto: ");
+		String nome = sc.nextLine();
+		sc.nextLine();
+		System.out.print("Digite o preço do produto: ");
+		double preco = sc.nextDouble();
+		System.out.print("Digite a Quantidade: ");
+		int quantidade = sc.nextInt();
+		Produto item = new Produto(nome, preco, quantidade);
+		itens.add(item);
+		System.out.println("Item adicionado com sucesso!");
+		System.out.println("------------------------------------");
+		System.out.println();
+	}
+
+	public void lisatarItens() {
+		for (Produto p : itens) {
+			System.out.println(p);
+		}
+	}
+
+	public void removerItens() {
+		System.out.println();
+		System.out.println("------------------------------------");
+		sc.nextLine();
+		System.out.println("Digite o nome do item que deseja remover: ");
+		String removerProd = sc.nextLine();
+
+		Produto itemParaRemover = null;
+		for (Produto p : itens) {
+			if (p.getNome().equalsIgnoreCase(removerProd)) {
+				itemParaRemover = p;
+			}
+			break;
+		}
+		if (itemParaRemover != null) {
+			itens.remove(itemParaRemover);
+			System.out.println("Item removido com sucesso!");
+		} else {
+			System.out.println("Este item não está  na lista!");
+		}
+		System.out.println("------------------------------------");
+		System.out.println();
+	}
+
+	public String Total() {
+	
+		double total = 0;
+		for (Produto p : itens) {
+			total += p.calcularSubtotal();
+		}
+		return  "\n------------------------------------\n"
+				+ "Total da Compra: R$ "
+		        + String.format("%.2f", total)
+		        +"\n------------------------------------\n";
+	}
+
+	@Override
+	public final String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("\n-------------------------------- \n");
+		sb.append("Compra finalizada! \n");
+		sb.append("Total pago: R$ ");
+		sb.append(Total()).append("\n");
+		sb.append("Obigado pela prefêrencia!");
+		sb.append("\n-------------------------------- \n");
+		sc.close();
+		return sb.toString();
+	}
+
+}

@@ -1,0 +1,37 @@
+package service;
+
+import model.Carrinho;
+import model.Produto;
+
+public class CarrinhoService {
+
+	 Carrinho carrinho;
+	
+	public CarrinhoService(){
+	}
+
+	public CarrinhoService(Carrinho carrinho) {
+		this.carrinho = carrinho;
+	}
+
+	public boolean adicionarProduto(String nome, Double preco, Integer quantidade) {
+		if (nome == null || nome.isBlank()) {
+			System.out.println("Erro: O nome do produto não pose estár vazio.");
+			return false;
+		}
+
+		if (preco <= 0.0 || quantidade <= 0) {
+			System.out.println("Erro: Preço e quantidade devem ser maior do que zero.");
+		}
+
+		Produto itens = new Produto(nome, preco, quantidade);
+		carrinho.adicionarItens(itens);
+		return true;
+
+	}
+	
+	public boolean rmoverProduto(carrinho.) {
+		
+	}
+
+}
