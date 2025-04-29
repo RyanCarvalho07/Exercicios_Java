@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="java.time.LocalTime"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="entities.SistemaReserva"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
@@ -10,6 +9,22 @@
     <fullyQualifiedTypeName name="entities.Reserva"/>
     <fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatterBuilder"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="entities.Product"/>
+    <fullyQualifiedTypeName name="entities.UsedProduct"/>
+    <fullyQualifiedTypeName name="entities.ImportedProduct"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="model.CoordenadorDeFuncionario"/>
+    <fullyQualifiedTypeName name="model.Administrativo"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="model.Coordenador"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="entities.Rectangle"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="entities.Circle"/>
+    <fullyQualifiedTypeName name="entities.Shape"/>
+    <fullyQualifiedTypeName name="entities_enum.Color"/>
 </qualifiedTypeNameHistroy>
