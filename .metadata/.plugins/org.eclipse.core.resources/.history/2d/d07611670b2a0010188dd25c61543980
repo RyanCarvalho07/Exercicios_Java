@@ -1,0 +1,33 @@
+package entities;
+
+public class Physicsperson extends Taxpayer {
+
+	private Double Healthexpenses;
+
+	public Physicsperson() {
+		super();
+	}
+
+	public Physicsperson(String name, Double annualIncome, Double healthexpenses) {
+		super(name, annualIncome);
+		Healthexpenses = healthexpenses;
+	}
+
+	public Double getHealthexpenses() {
+		return Healthexpenses;
+	}
+
+	public void setHealthexpenses(Double healthexpenses) {
+		Healthexpenses = healthexpenses;
+	}
+
+	@Override
+	public void calculateTax() {
+		double tax = 0.0; 
+		if(annualIncome < 20000.0) {
+			tax = annualIncome * 0.15;
+		}
+
+	}
+
+}
