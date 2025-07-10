@@ -65,6 +65,8 @@ public class Account {
 		if (amount > getBalance()) {
 			throw new Exceptions("Not enough balance");
 		}
+		
+		
 
 	}
 
