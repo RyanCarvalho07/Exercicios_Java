@@ -31,4 +31,8 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="application.program"/>
     <fullyQualifiedTypeName name="entities.Taxpayer"/>
+    <fullyQualifiedTypeName name="entities.model.Contract"/>
+    <fullyQualifiedTypeName name="service.OnlinePaymentService"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="model.Installment"/>
 </qualifiedTypeNameHistroy>

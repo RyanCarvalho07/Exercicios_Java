@@ -1,12 +1,17 @@
 package model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Installment {
 
 	private LocalDate dueDate;
 	private Double amount;
 	
+	 private static DateTimeFormatter dtft = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	
+	public Installment() {
+	}
 	
 	public Installment(LocalDate dueDate, Double amount) {
 		this.dueDate = dueDate;
@@ -31,6 +36,15 @@ public class Installment {
 
 	public void setAmount(Double amount) {
 		this.amount = amount;
+	}
+	
+	
+	@Override
+	public String toString(){
+		return  dueDate.format(dtft) +
+	            " - " +
+	            String.format("%.2f", amount);
+				
 	}
 	
 	
